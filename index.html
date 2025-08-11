@@ -12,6 +12,7 @@
         <nav>
             <a href="#lessons">Lessons</a>
             <a href="#progress">Progress</a>
+            <a href="#leaderboard">Leaderboard</a>
             <a href="#certificates">Certificates</a>
         </nav>
     </header>
@@ -20,6 +21,10 @@
         <h2>Learn Skills. Take Quizzes. Earn Certificates.</h2>
         <p>Fast, interactive, and skill-specific micro-learning at your fingertips.</p>
         <button onclick="startLearning()">Start Learning</button>
+    </section>
+
+    <section id="streak">
+        <h2>🔥 Your Learning Streak: <span id="streak-count">0</span> days</h2>
     </section>
 
     <section id="lessons">
@@ -50,12 +55,29 @@
         </div>
     </section>
 
+    <section id="leaderboard">
+        <h2>🏅 Leaderboard</h2>
+        <ul id="leaderboard-list">
+            <li><strong>John Doe</strong> - 3 Certificates</li>
+            <li><strong>Jane Smith</strong> - 2 Certificates</li>
+            <li><strong>You</strong> - 0 Certificates</li>
+        </ul>
+    </section>
+
     <section id="certificates">
         <h2>Earned Certificates</h2>
         <div id="certificate-list">
             <p>No certificates yet. Complete a quiz to earn one!</p>
         </div>
     </section>
+
+    <div id="certificate-popup" class="hidden">
+        <div class="popup-content">
+            <h2>🏆 Certificate Earned!</h2>
+            <p id="popup-text"></p>
+            <button onclick="closePopup()">Close</button>
+        </div>
+    </div>
 
     <footer>
         <p>© 2025 Micro-Certification Learning Platform | Designed with ❤️</p>
