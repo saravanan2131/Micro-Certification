@@ -7,80 +7,41 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
         <h1>🎓 Micro-Certification Learning Platform</h1>
         <nav>
-            <a href="#lessons">Lessons</a>
-            <a href="#progress">Progress</a>
-            <a href="#leaderboard">Leaderboard</a>
-            <a href="#certificates">Certificates</a>
+            <button onclick="showSection('lessons')">Lessons</button>
+            <button onclick="showSection('quiz')">Quiz</button>
+            <button onclick="showSection('dashboard')">Dashboard</button>
         </nav>
     </header>
 
-    <section id="hero">
-        <h2>Learn Skills. Take Quizzes. Earn Certificates.</h2>
-        <p>Fast, interactive, and skill-specific micro-learning at your fingertips.</p>
-        <button onclick="startLearning()">Start Learning</button>
-    </section>
+    <main>
+        <!-- Lessons Section -->
+        <section id="lessons" class="active">
+            <h2>Available Lessons</h2>
+            <ul id="lessonList"></ul>
+        </section>
 
-    <section id="streak">
-        <h2>🔥 Your Learning Streak: <span id="streak-count">0</span> days</h2>
-    </section>
+        <!-- Quiz Section -->
+        <section id="quiz" class="hidden">
+            <h2>Quiz</h2>
+            <div id="quizContainer"></div>
+            <button id="submitQuiz" class="hidden">Submit Quiz</button>
+        </section>
 
-    <section id="lessons">
-        <h2>Available Lessons</h2>
-        <div class="lesson-grid">
-            <div class="lesson-card">
-                <h3>📊 Excel Basics</h3>
-                <p>Master essential Excel skills in minutes.</p>
-                <button onclick="startQuiz('Excel Basics')">Take Quiz</button>
-            </div>
-            <div class="lesson-card">
-                <h3>💻 JavaScript Essentials</h3>
-                <p>Understand JS fundamentals quickly.</p>
-                <button onclick="startQuiz('JavaScript Essentials')">Take Quiz</button>
-            </div>
-            <div class="lesson-card">
-                <h3>📝 Resume Writing</h3>
-                <p>Create a professional, standout resume.</p>
-                <button onclick="startQuiz('Resume Writing')">Take Quiz</button>
-            </div>
-        </div>
-    </section>
-
-    <section id="progress">
-        <h2>Your Progress</h2>
-        <div class="progress-bar">
-            <div id="progress-fill">0%</div>
-        </div>
-    </section>
-
-    <section id="leaderboard">
-        <h2>🏅 Leaderboard</h2>
-        <ul id="leaderboard-list">
-            <li><strong>John Doe</strong> - 3 Certificates</li>
-            <li><strong>Jane Smith</strong> - 2 Certificates</li>
-            <li><strong>You</strong> - 0 Certificates</li>
-        </ul>
-    </section>
-
-    <section id="certificates">
-        <h2>Earned Certificates</h2>
-        <div id="certificate-list">
-            <p>No certificates yet. Complete a quiz to earn one!</p>
-        </div>
-    </section>
-
-    <div id="certificate-popup" class="hidden">
-        <div class="popup-content">
-            <h2>🏆 Certificate Earned!</h2>
-            <p id="popup-text"></p>
-            <button onclick="closePopup()">Close</button>
-        </div>
-    </div>
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="hidden">
+            <h2>Your Dashboard</h2>
+            <p><strong>Progress:</strong> <span id="progressTracker">0%</span></p>
+            <h3>Certificates</h3>
+            <ul id="certificateList"></ul>
+        </section>
+    </main>
 
     <footer>
-        <p>© 2025 Micro-Certification Learning Platform | Designed with ❤️</p>
+        <p>© 2025 Micro-Certification Learning Platform</p>
     </footer>
 
     <script src="script.js"></script>
