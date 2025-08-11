@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micro-Certification Learning Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🎓 Micro-Certification Learning Platform</h1>
+        <nav>
+            <a href="#lessons">Lessons</a>
+            <a href="#progress">Progress</a>
+            <a href="#certificates">Certificates</a>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h2>Learn Skills. Take Quizzes. Earn Certificates.</h2>
+        <p>Fast, interactive, and skill-specific micro-learning at your fingertips.</p>
+        <button onclick="startLearning()">Start Learning</button>
+    </section>
+
+    <section id="lessons">
+        <h2>Available Lessons</h2>
+        <div class="lesson-grid">
+            <div class="lesson-card">
+                <h3>📊 Excel Basics</h3>
+                <p>Master essential Excel skills in minutes.</p>
+                <button onclick="startQuiz('Excel Basics')">Take Quiz</button>
+            </div>
+            <div class="lesson-card">
+                <h3>💻 JavaScript Essentials</h3>
+                <p>Understand JS fundamentals quickly.</p>
+                <button onclick="startQuiz('JavaScript Essentials')">Take Quiz</button>
+            </div>
+            <div class="lesson-card">
+                <h3>📝 Resume Writing</h3>
+                <p>Create a professional, standout resume.</p>
+                <button onclick="startQuiz('Resume Writing')">Take Quiz</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="progress">
+        <h2>Your Progress</h2>
+        <div class="progress-bar">
+            <div id="progress-fill">0%</div>
+        </div>
+    </section>
+
+    <section id="certificates">
+        <h2>Earned Certificates</h2>
+        <div id="certificate-list">
+            <p>No certificates yet. Complete a quiz to earn one!</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Micro-Certification Learning Platform | Designed with ❤️</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
